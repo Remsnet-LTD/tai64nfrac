@@ -26,11 +26,11 @@ expects.
 
 =head1 SEE ALSO
 
-See <http://cr.yp.to/daemontools/tai64nlocal.html> for documentation of
+See L<http://cr.yp.to/daemontools/tai64nlocal.html> for documentation of
 B<tai64nlocal>, which converts TAI64N timestamps to human-readable times
 in the local time zone.
 
-See <http://cr.yp.to/qmailanalog.html> for qmailanalog.
+See L<http://cr.yp.to/qmailanalog.html> for qmailanalog.
 
 =head1 AUTHOR
 
