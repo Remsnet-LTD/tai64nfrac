@@ -32,7 +32,8 @@ decode(void)
         u = c - '0';
         if (u >= 10) {
             u = c - 'a';
-            if (u >= 6) break;
+            if (u >= 6)
+                break;
             u += 10;
         }
         seconds <<= 4;
@@ -51,15 +52,19 @@ int
 main(void)
 {
     int c;
-    int ontty = isatty(stdout);
+
+    /* Set the output to be line buffered. */
+    setvbuf(stdout, NULL, _IOLBF, BUFSIZ);
 
     while ((c = getchar()) != EOF) {
-        if (c == '@') c = decode();
+        if (c == '@')
+            c = decode();
         while (c != EOF) {
             putchar(c);
-            if (c == '\n') break;
+            if (c == '\n')
+                break;
             c = getchar();
         }
-        if (ontty) fflush(stdout);
     }
+    return 0;
 }
