@@ -20,9 +20,16 @@ syslog via splogger.
 
 =head1 BUGS
 
-B<tai64nfrac> makes no attempt to handle leap seconds.  The time since
-epoch may be in TAI rather than in UTC, which may not be what your system
-expects.
+B<tai64nfrac> makes no attempt to handle leap seconds or to handle TAI to
+UTC conversion correctly.  It was written with hard-coded adjustments for
+systems where the system clock is in UTC and no leap seconds file is
+present.  In that situation, software generating TAI64N timestamps will
+generate timestamps with an epoch 10 seconds different than UTC, which
+B<tai64nfrac> adjusts for.
+
+This is obviously not the correct approach, which would be to use the code
+and algorithms in libtai.  It was just the expedient thing to do for my
+immediate problem.
 
 =head1 SEE ALSO
 
