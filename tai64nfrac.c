@@ -42,7 +42,7 @@ decode(void)
         nanoseconds += u;
     }
     seconds -= 4611686018427387914ULL;
-    printf("%lu.%lu", seconds, nanoseconds);
+    printf("%lu.%09lu", seconds, nanoseconds);
     return c;
 }
 
@@ -51,6 +51,7 @@ int
 main(void)
 {
     int c;
+    int ontty = isatty(stdout);
 
     while ((c = getchar()) != EOF) {
         if (c == '@') c = decode();
@@ -59,5 +60,6 @@ main(void)
             if (c == '\n') break;
             c = getchar();
         }
+        if (ontty) fflush(stdout);
     }
 }
