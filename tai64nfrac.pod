@@ -32,6 +32,9 @@ in the local time zone.
 
 See L<http://cr.yp.to/qmailanalog.html> for qmailanalog.
 
+The current version of this program is available from its web page at
+L<http://www.eyrie.org/~eagle/software/tai64nfrac/>.
+
 =head1 AUTHOR
 
 Russ Allbery <rra@stanford.edu>
