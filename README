@@ -2,8 +2,10 @@
           (convert TAI64N dates to decimal seconds since epoch)
                 Written by Russ Allbery <rra@stanford.edu>
 
-  You may treat this work in all respects as if it were in the public
-  domain.
+  This program is in the public domain.  If it is not legal or possible to
+  place a work in the public domain in your jurisdiction, then I hereby
+  grant you a license to treat this program in every way as if it were in
+  the public domain.
 
 
 DESCRIPTION
